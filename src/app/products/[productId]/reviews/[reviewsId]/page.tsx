@@ -1,9 +1,12 @@
-export default async function ProductReview({ params }: { params: { productId: string, reviewsId: string } }) {
+export default async function ProductReview({
+    params,
+}: {
+    params: { productId: string; reviewsId: string };
+}) {
+    const { productId, reviewsId } = params;
     return (
-        <main>
-            <h1>Product {params.productId}</h1>
-            <h2>Review {params.reviewsId}</h2>
-            <p>Details about review {params.reviewsId} for product {params.productId}</p>
-        </main>
-    )
+        <h1>
+            review {reviewsId} for product {productId}
+        </h1>
+    );
 }
